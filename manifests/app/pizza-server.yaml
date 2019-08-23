@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pizza-server
+  name: pizza-server
+  namespace: app-space
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: pizza-server
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: pizza-server
+    spec:
+      containers:
+      - image: bluefx/pizza-server:v1
+        name: pizza-server
+        resources: {}
+        ports:
+        - name: server-port
+          containerPort: 5000
+          protocol: TCP
+status: {}

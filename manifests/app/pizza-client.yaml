@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pizza-client
+  name: pizza-client
+  namespace: app-space
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: pizza-client
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: pizza-client
+    spec:
+      containers:
+      - image: bluefx/pizza-client:v1
+        name: pizza-client
+        resources: {}
+        env:
+        - name: CALL_CENTER_URL
+          value: "http://pizza-server.app-space.svc"
+        - name: REQUEST_INTERVAL
+          value: "500"
+status: {}
