@@ -19,7 +19,7 @@ spec:
         run: pizza-client
     spec:
       containers:
-      - image: bluefx/pizza-client:v1
+      - image: oktano/sample-pizza-client-app:v1
         name: pizza-client
         resources: {}
         env:
