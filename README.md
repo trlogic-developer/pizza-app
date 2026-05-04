@@ -1,4 +1,4 @@
-mermaid
+```mermaid
 
 graph TD
     %% İstemci Katmanı
@@ -59,4 +59,4 @@ graph TD
 
     %% Cluster Bağlantısı
     Node1 <==> Link <==> Node2
-mermaid
+```
