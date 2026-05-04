@@ -1,3 +1,5 @@
+mermaid
+
 graph TD
     %% İstemci Katmanı
     subgraph Clients [İstemci Katmanı]
@@ -57,3 +59,4 @@ graph TD
 
     %% Cluster Bağlantısı
     Node1 <==> Link <==> Node2
+mermaid
